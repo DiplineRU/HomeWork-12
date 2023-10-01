@@ -7,5 +7,20 @@ public class Main {
         book1.setBookYear(333);
         System.out.println(book1);
         System.out.println(book2);
+        if(author.equals(author1)){
+            System.out.println("Одинаковые авторы");
+        }
+        // Сравнение Хешей имен автора
+        if(author.hashCode() == author1.hashCode()){
+            System.out.println("Одинаковые авторы");
+        }
+        // Сравнение названии книги, автора, года издания
+        if(book1.equals(book2)){
+            System.out.println("Одинаковые книги");
+        }
+        // Сравнение Хешей названий книг, так как методы переписаны
+        if(book1.hashCode() == book2.hashCode()){
+            System.out.println("Одинаковые книги");
+        }
     }
 }
