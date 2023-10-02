@@ -28,7 +28,9 @@ public class Author {
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null) {
+            return false;
+            } if (this.getClass() != other.getClass()) {
             return false;
         }
         Author c2 = (Author) other;
